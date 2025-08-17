@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design</title>
+    <link rel="stylesheet" type="text/css" href="style10.css">
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        
+        <button type="submit">Submit</button>
+        <p id="errorMessage" style="color: red;"></p>
+    </form>
+   
+   
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let errorMessage = document.getElementById("errorMessage");
+
+    // Name validation: cannot be empty
+    if (name === "") {
+        errorMessage.innerText = "Name cannot be empty!";
+        return;
+    }
+
+    // Email validation: must contain "@" and "."
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+    if (!email.match(emailPattern)) {
+        errorMessage.innerText = "Enter a valid email!";
+        return;
+    }
+
+    // Password validation: at least 6 characters
+    if (password.length < 6) {
+        errorMessage.innerText = "Password must be at least 6 characters!";
+        return;
+    }
+
+    // If all validations pass
+    errorMessage.innerText = "";
+    alert("Form submitted successfully!");
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click Here</button>
+    <p id="output">waiting for your click</p>
+<script>
+ let user = { name: "Alice", age: 25 };
+ localStorage.setItem("user", JSON.stringify(user));
+ let storedUser = JSON.parse(localStorage.getItem("user"));
+console.log(storedUser.name); // Output: Alice
+
+   </script>
+</body>
+</html>

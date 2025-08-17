@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="faq.css">
+    
+</head>
+<body>
+    <div class="faq">
+        <div class="faq-item">
+          <h3 class="faq-question">What is HTML?</h3>
+          <p class="faq-answer">HTML is the structure of a web page.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">What is CSS?</h3>
+          <p class="faq-answer">CSS styles the appearance of the page.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">What is JavaScript?</h3>
+          <p class="faq-answer">JavaScript makes the page interactive.</p>
+        </div>
+      </div>
+      <button id="menu-btn">☰</button>
+<nav id="nav-menu" class="hidden">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+<form id="contact-form">
+    <input type="text" id="name" placeholder="Your Name" >
+    <input type="email" id="email" placeholder="Your Email" >
+    <button type="submit">Send</button>
+  </form>
+  
+      <script>
+        const questions = document.querySelectorAll('.faq-question');
+
+questions.forEach(q => {
+  q.addEventListener('click', () => {
+    // Close all
+    questions.forEach(item => item.parentElement.classList.remove('active'));
+    // Open the clicked one
+    q.parentElement.classList.add('active');
+  });
+});
+const menuBtn = document.getElementById("menu-btn");
+const navMenu = document.getElementById("nav-menu");
+
+menuBtn.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", (e) => {
+  if (!form.name.value || !form.email.value) {
+    alert("Please fill out all fields.");
+    e.preventDefault();
+  }
+});
+
+    </script>
+</body>
+</html>

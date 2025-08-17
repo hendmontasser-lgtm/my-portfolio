@@ -1,0 +1,42 @@
+header{
+    width: 50%;
+    background-color: antiquewhite;
+    margin: auto;
+    text-align: center;
+    border:2px solid blue;
+    border-radius: 5px;
+}
+header h1{
+    color: blueviolet;
+    font: size 40px;
+    font-weight: 900;
+    font-style: italic;
+    text-decoration: underline;
+}
+header p{
+    font-size: 20px;
+    color: hotpink;
+    margin: 10px;
+}
+ul{
+    color:firebrick;
+}
+li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+ul li a{
+    text-decoration: none;
+    color: brown;
+}
+ul li a:hover{
+    font-size: 20px;
+    background-color: yellowgreen;
+    color: white;
+}
+footer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+}

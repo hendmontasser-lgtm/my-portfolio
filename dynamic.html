@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+    
+        button:hover {
+            background-color: red;
+        }
+    </style>
+    
+   
+    
+</head>
+<body>
+    <input type="text" id="nameInput" placeholder="Type your name">
+<p id="greeting">Hello, Guest!</p>
+<button>Hover Me</button>
+
+<script>
+    document.getElementById("nameInput").addEventListener("input", function() {
+        let name = this.value;
+        document.getElementById("greeting").innerText = name ? `Hello, ${name}!` : "Hello, Guest!";
+    });
+</script>
+
+</body>
+</html>

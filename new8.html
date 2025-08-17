@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            transition: left 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changeBackground()">Change Backround</button>
+    <div id="box"></div>
+    <button onclick="moveBox()">Move the box</button>
+<script>
+    function changeBackground(){
+        document.body.style.backgroundColor="lightblue";
+    }
+    function moveBox(){
+        let box= document.getElementById("box");
+        box.style.left="200px";
+    }
+</script>
+</body>
+</html>

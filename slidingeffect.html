@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes slide {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            animation: slide 1s ease-out;
+        }
+        
+    .circle {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        border-radius: 50%;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .circle:hover {
+        transform: scale(1.5) rotate(360deg);
+    }
+
+
+
+
+    </style>
+    
+    
+    
+</head>
+<body>
+    <div class="box"></div>
+    <br><br>
+    <div class="circle"></div>
+</body>
+</html>
